@@ -14,7 +14,9 @@
     "prepublishOnly": "yarn build",
     "test": "yarn build:typescript && node test",
     "coverage": "nyc node test",
-    "coverage:html": "nyc --reporter=html node test"
+    "coverage:html": "nyc --reporter=html node test",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -42,9 +44,11 @@
     "eth-rpc-errors": "^3.0.0",
     "is-subset": "^0.1.1",
     "json-rpc-engine": "^5.3.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "@snyk/protect": "latest"
   },
   "files": [
     "dist/"
-  ]
+  ],
+  "snyk": true
 }
